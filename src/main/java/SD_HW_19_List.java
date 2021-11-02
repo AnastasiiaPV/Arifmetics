@@ -29,18 +29,17 @@ public class SD_HW_19_List {
                 colors.add("Pink");
                 colors.add("Purple");
                 colors.add("Blue");
-
         return colors;
     }
 
     public static void deleteWithL(List<String> colors){
+        List<String> newList = new ArrayList<>();
+
         for (int i = 0; i < colors.size(); i++) {
-            if(colors.get(i).contains("l")){
-                colors.remove(i);
+            if(!colors.get(i).contains("l")){
+                newList.add(colors.get(i));
             }
         }
-       // colors.remove(colors.size()-1);
-        System.out.println(colors);
+        System.out.println(newList);
     }
-
 }
